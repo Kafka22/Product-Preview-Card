@@ -19,4 +19,5 @@ Built with
 Author
 
 - Frontend Mentor - [@Kafka22](https://www.frontendmentor.io/profile/Kafka22)
+- Deploy - https://kafka22.github.io/product-preview-card-component/
 
