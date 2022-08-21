@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <style>
+    :root{
+      --darkCyan: hsl(158, 36%, 37%);
+      --cream: hsl(30, 38%, 92%);
+      --veryDarkBlue: hsl(212, 21%, 14%);
+      --darkGrayish: hsl(228, 12%, 48%);
+      --white: hsl(0, 0%, 100%);
+      --sm: 14px;
+      --md:16px;
+      --lg:18px;
+      --Montserrat: 'Montserrat', sans-serif;
+      --Fraunces: 'Fraunces', serif;
+    }
+    body{
+      font-size: 14px;
+      margin: 0%;
+    }
+    .main-container{
+      display: grid;
+      place-items: center;
+      background-color: var(--cream);
+      margin: 0px;
+      height: 100vh;
+    }
+    .card-container{
+      display: flex;
+      width: 600px;
+      height: 80%;
+      margin-top: 60px;
+      border-radius: 20px;
+     }
+    .image{
+      width: 300px ;
+      height: 100%;
+      border-radius: 20px 0px 0px 20px;
+    }
+    .product-info{
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      border-radius: 0px 20px 20px 0px;
+      width: 300px;
+      padding: 20px;
+      background-color: var(--white);
+    }
+    .product-info > p:nth-child(1){
+      font-size: 14px;
+      font-family: var(--Montserrat);
+      color: var(--darkGrayish);
+      margin: 0%;
+      font-weight: 500;
+    }
+    .product-info > p:nth-child(2){
+      font-size: 30px;
+      font-family: var(--Fraunces);
+      color: var(--veryDarkBlue);
+      font-weight: bold;
+      line-height: 95%;
+    }
+    .product-info > p:nth-child(3){
+      font-size: 14px;
+      font-family: var(--Montserrat);
+      font-weight: 500;
+      color: var(--darkGrayish);
+      margin: 0%;
+    }
+    .prices{
+      display: flex;
+      align-items: center;
+    }
+    .prices p:nth-child(1){
+      font-size: 30px;
+      font-family: var(--Fraunces);
+      color: var(--darkCyan);
+      font-weight: bold;
+      margin-right: 30px;
+      
+    }
+    .prices p:nth-child(2){
+      font-family: var(--Montserrat);
+      color: var(--darkGrayish);
+    }
+    button{
+      font-size: 16px;
+      font-weight: bold;
+      padding: 14px;
+      border: 0px;
+      border-radius: 20px;
+      color: var(--white);
+      background-color: var(--darkCyan);
+    }
+    button:hover{
+      background-color: var(--veryDarkBlue);
+      cursor: pointer;
+    }
+    .attribution{
+      display: block;
+      position: relative;
+      bottom: 40px;
+      font-size: 11px;
+      background-color: var(--cream);
+      text-align: center;
+      justify-self: center;
+    }
+    @media (max-width: 640px){
+      .main-container{
+      height: 100%;
+    }
+      .card-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      margin-top: 20px;
+    }
+    .image{
+      width: 80%;
+      height: 50%;
+      border-radius: 20px 20px 0px 0px;
+    }
+    .product-info{
+      border-radius: 0px 0px 20px 20px;
+      width: 80%;
+     }
+     .attribution{
+      position: static;
+     }
+    }
+  </style>
+</head>
+<body>
+<main class="main-container">
+  <div class="card-container">
+      <img src="./images/image-product-desktop.jpg" alt="" class="image">
+      <div class="product-info">
+          <p>P E R F U M E</p>
+          <p> Gabrielle<br> Essence Eau<br> De Parfum</p>
+          <p>A floral, solar and voluptuous interpretation composed by<br> Olivier Polge, 
+            Perfumer-Creator<br> for the House of CHANEL.</p>
+          <div class="prices">
+              <p>$149.99</p>
+              <p><del>$169.99</del></p>
+          </div>
+          <button><img src="./images/icon-cart.svg"> Add to Cart</button>
+      </div>
+    </div>
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#"> nicolásCabreraDev</a>.
+      </div>
+  </main>
+</body>
+</html>
